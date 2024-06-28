@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "docxtemplater": "^3.47.4",
+    "effector": "^23.2.2",
+    "effector-react": "^23.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.24.0",
