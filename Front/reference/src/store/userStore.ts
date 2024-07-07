@@ -6,6 +6,7 @@ export const resetUser = createEvent();
 
 // Хранилище для данных пользователя
 const initialUser = {
+  isAuth: false,
   name: '',
   email: '',
 };
