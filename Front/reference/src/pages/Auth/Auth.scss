@@ -1,12 +1,14 @@
+@import url( https://fonts.googleapis.com/css?family=Montserrat+Alternates);
 
 body{
   margin: 0;
   height:100%;
   background: url("picture.svg")  no-repeat center center fixed;
   .Auth{
+    font-family: 'Montserrat Alternates', sans-serif;
     display: flex;
-    justify-content: center; /* по горизонтали */
-    align-items: center; /* по вертикали */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     .FormAuth {
     display:flex;
@@ -19,22 +21,31 @@ body{
     border-color: #0500FF;
     border-style: solid;
     border-width: 3px;
-    padding-left: 5vh;
+    padding-left: 8vh;
     padding-bottom: 2vh;
     padding-top:2vh;
-    padding-right: 5vh;
-
+    padding-right: 8vh;
+      p{
+        align-self:start;
+      }
     input, button{
+      font-family: 'Montserrat Alternates', sans-serif;
       background: white;
       border-radius: 15px;
       margin-bottom: 1.5vh;
       border-color: #0500FF;
       border-style: solid;
       border-width: 3px;
-      padding-left: 1.5vh;
+      padding-left: 2.5vh;
       padding-bottom: 2.5vw;
       padding-top: 2.5vw;
-      padding-right: 1.5vh;
+      padding-right: 25.5vh;
+    }
+    button{
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-weight: bold;
+      padding: 1.5vh 5.5vh;
+
     }
     button:hover{
       animation: changeColor 0.3s ease forwards;

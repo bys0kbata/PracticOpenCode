@@ -16,7 +16,11 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', '*');
 });
-app.get("/getoneuser", async (req, res) => {
+app.get("/", (req, res, next)=>{
+    res.writeHead(200,{"Content-Type": "text/plain; charset=utf-8"})
+    res.end(`Привет, клиент. Ваш сервер работает! \n Это означает, что разработчик не криворукий(но это не точно).`);
+});
+app.get("/user/getone", async (req, res) => {
     try {
 
         const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
@@ -25,11 +29,34 @@ app.get("/getoneuser", async (req, res) => {
         res.send((500).toString());
     }
 })
-app.get("/", (req, res, next)=>{
-    res.writeHead(200,{"Content-Type": "text/plain; charset=utf-8"})
-    res.end(`Привет, клиент. Ваш сервер работает! \n Это означает, что разработчик не криворукий(но это не точно).`);
-});
-app.get("/getallref", async (req,res,next)=>{
+app.get("/user/getall", async (req, res) => {
+    try {
+
+        const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
+        res.send(resSQL.rows);
+    } catch {
+        res.send((500).toString());
+    }
+})
+app.get("/user/getlist", async (req, res) => {
+    try {
+
+        const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
+        res.send(resSQL.rows);
+    } catch {
+        res.send((500).toString());
+    }
+})
+app.get("/user/auth", async (req, res) => {
+    try {
+
+        const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
+        res.send(resSQL.rows);
+    } catch {
+        res.send((500).toString());
+    }
+})
+app.get("/ref/getall", async (req,res,next)=>{
     try{
         const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
         res.send(resSQL.rows);
@@ -40,7 +67,7 @@ app.get("/getallref", async (req,res,next)=>{
     }
 
 });
-app.get("/getoneref",async (req,res,next)=>{
+app.get("/ref/getone",async (req,res,next)=>{
     try{
         const idRef = req.headers.idref;
         const resSQL = await client.query(`SELECT * FROM "public"."News" WHERE "idnews"=${idNews};`);
@@ -51,7 +78,15 @@ app.get("/getoneref",async (req,res,next)=>{
         res.send((500).toString());
     }
 });
-app.post("/createref",urlencodedParser, async (req,res,next)=>{
+app.post("/ref/create",urlencodedParser, async (req,res,next)=>{
+    try{
+
+    } catch (error) {
+        console.error(error);
+
+    }
+});
+app.post("/ref/delete",urlencodedParser, async (req,res,next)=>{
     try{
 
     } catch (error) {
