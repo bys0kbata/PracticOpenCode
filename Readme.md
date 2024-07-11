@@ -6,7 +6,7 @@ Reference - это web-приложение для отслеживания ст
 <table>
     <thead>
         <tr>
-            <th>Используемые технологий</th>
+            <th columnspan=2 >Используемые технологий</th>
         </tr>
     </thead>
     <tbody>
@@ -14,16 +14,16 @@ Reference - это web-приложение для отслеживания ст
             <td rowspan=4 align="center">Frontend</td>
             <td  align="center">React.ts</td>
         </tr>
-        <tr> Typescript</tr>
-        <tr> Axios</tr>
-        <tr> Effector</tr>
+        <tr> <td> Typescript</td></tr>
+        <tr><td> Axios</td></tr>
+        <tr> <td>Effector</td></tr>
         <tr>
             <td rowspan=4 align="center">Backend</td>
             <td> Nodejs</td>
         </tr>
-        <tr> Javascript</tr> 
-        <tr> Nodemon</tr>
-        <tr> PG</tr>
+        <tr> <td>Javascript</td></tr> 
+        <tr> <td>Nodemon</td></tr>
+        <tr> <td>PG</td></tr>
         <tr>
             <td> DataBase</td>
             <td align="center">Postgres</td>
