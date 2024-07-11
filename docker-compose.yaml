@@ -1,0 +1,38 @@
+version: "3.0"
+
+service:
+
+
+  frontend:
+    container-name: "front-Ref"
+    image:
+    volumes:
+      - ./Front/reference:/index
+    port:
+      - '80':'5432'
+  backend:
+    container_name: "back-Ref"
+    image:
+    volumes:
+      - ./Server:/app
+    port:
+      - "3000:3000"
+
+
+  db:
+    container-name: "pg-db"
+    image: postgres:latest
+    enviroment: 
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DB:
+      PGDATA:
+    volumes: //Прокинуть данные базы данных
+    port:
+      - "5430:5432"
+
+      
+  pgadmin4:
+    container-name: "pgadmin"
+    image:
+    port: 
