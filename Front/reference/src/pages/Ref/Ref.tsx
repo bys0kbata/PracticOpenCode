@@ -1,15 +1,41 @@
-export default function Ref() {
-    return(
-        <div className = "ref">
-            <div>
+import React from "react";
 
+export default function Ref() {
+
+
+    const StatusElement = ()=>{
+        return(
+            <div className="StatusElement">
+                Создана
+            </div>
+        )
+    }
+
+
+
+    return(
+        <div className="ref">
+            <div>
+                <h1>Служебная записка №</h1>
+                <StatusElement/>
+            </div>
+            <div className="dividing-line"/>
+            <div>
+                <div className="Container">
+                    <label htmlFor="numberRef">Номер</label>
+                    <input name="DataCreateRef" disabled></input>
+                </div>
+                <div className="Container">
+                    <label htmlFor="DataCreateRef">Дата создания</label>
+                    <input name="numberRef" disabled></input>
+                </div>
             </div>
             <input/>
             <div>
 
             </div>
-            <textarea />
-            <input />
+            <textarea/>
+            <input/>
             <div>
 
             </div>
