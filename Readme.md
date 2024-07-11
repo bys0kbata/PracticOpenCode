@@ -3,11 +3,33 @@
 Reference - это web-приложение для отслеживания статуса и  взаимодествий с справоками.
 ##Используемые технлогий
 
-|        Используемые технологий           |
-|----------------------|-------------------|
-|      Frontend        |                   |
-|      Backend         |                   |
-|      DataBase        |                   |
+<table>
+    <thead>
+        <tr>
+            <th>Используемые технологий</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4 align="center">Frontend</td>
+            <td  align="center">React.ts</td>
+        </tr>
+        <tr> Typescript</tr>
+        <tr> Axios</tr>
+        <tr> Effector</tr>
+        <tr>
+            <td rowspan=4 align="center">Backend</td>
+            <td> Nodejs</td>
+        </tr>
+        <tr> Javascript</tr> 
+        <tr> Nodemon</tr>
+        <tr> PG</tr>
+        <tr>
+            <td> DataBase</td>
+            <td align="center">Postgres</td>
+        </tr>
+    </tbody>
+</table>
 
   Frontend был реализован с помощью фреймворка React на языке программирования Typescript, а в свою очередь backend - Nodejs. В качестве базы данных взял популярную СУБД Рostgresql.
 
