@@ -29,15 +29,6 @@ app.get("/user/getone", async (req, res) => {
         res.send((500).toString());
     }
 })
-app.get("/user/getall", async (req, res) => {
-    try {
-
-        const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
-        res.send(resSQL.rows);
-    } catch {
-        res.send((500).toString());
-    }
-})
 app.get("/user/getlist", async (req, res) => {
     try {
 

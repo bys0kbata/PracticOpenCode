@@ -2,7 +2,6 @@ version: "3.0"
 
 service:
 
-
   frontend:
     container-name: "front-Ref"
     image:
@@ -10,6 +9,7 @@ service:
       - ./Front/reference:/index
     port:
       - '80':'5432'
+      
   backend:
     container_name: "back-Ref"
     image:
@@ -20,7 +20,7 @@ service:
 
 
   db:
-    container-name: "pg-db"
+    container-name: "pg-db-ref"
     image: postgres:latest
     enviroment: 
       POSTGRES_USER:
@@ -31,7 +31,7 @@ service:
     port:
       - "5430:5432"
 
-      
+
   pgadmin4:
     container-name: "pgadmin"
     image:
