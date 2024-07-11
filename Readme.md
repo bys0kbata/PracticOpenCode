@@ -6,7 +6,7 @@ Reference - это web-приложение для отслеживания ст
 <table>
     <thead>
         <tr>
-            <th columnspan=2 >Используемые технологий</th>
+            <th colspan=2 >Используемые технологий</th>
         </tr>
     </thead>
     <tbody>
