@@ -1,13 +1,20 @@
 import { useState } from "react";
 import "./Auth.scss"
+import axios from "axios";
 
 export default function Auth(){
     const [login, setLogin] = useState();
     const [password, setPassword] = useState();
     const [viserror, setViserror] = useState(false);
+    const data = {
+        login: login,
+        password: password,
+    }
     const ErrorMessage = ()=>{ return(<p className="error" >Неверно введен логин или пароль. </p>)}
+
     const valid = (e)=>{
         e.preventDefault();
+
         setViserror(true);
     }
 

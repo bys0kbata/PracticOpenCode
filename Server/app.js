@@ -77,7 +77,7 @@ app.post("/ref/create",urlencodedParser, async (req,res,next)=>{
 
     }
 });
-app.post("/ref/delete",urlencodedParser, async (req,res,next)=>{
+app.delete("/ref/delete",urlencodedParser, async (req,res,next)=>{
     try{
 
     } catch (error) {
@@ -85,7 +85,14 @@ app.post("/ref/delete",urlencodedParser, async (req,res,next)=>{
 
     }
 });
+app.put("/ref/put",urlencodedParser, async (req,res,next)=>{
+    try{
 
+    } catch (error) {
+        console.error(error);
+
+    }
+});
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
