@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Auth.scss"
 import {AuthUser} from "../../api/User.ts";
+import {$user} from "../../store/userStore.ts";
 
 interface User{
     login: string ,
@@ -23,7 +24,7 @@ export default function Auth(){
         e.preventDefault();
         AuthUser(data)
             .then(()=>{
-
+                $user.on(true,)
             })
 
         setViserror(true);
@@ -35,7 +36,7 @@ export default function Auth(){
                 <h1>Вход в систему</h1>
                 {viserror && <ErrorMessage />}
                 <input type="text" placeholder="Введите логин" onChange={(e)=>{setLogin(e.target.value)} } />
-                <input type="password" placeholder="Введите пароль" onChange={(e: React)=>{setPassword(e.target.value)}} />
+                <input type="password" placeholder="Введите пароль" onChange={(e)=>{setPassword(e.target.value)}} />
                 <button onClick={(e)=>{ valid(e);}}>Войти</button>
             </form>
         </div>

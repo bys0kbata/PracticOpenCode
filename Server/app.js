@@ -32,7 +32,7 @@ app.get("/user/getone", async (req, res) => {
 app.get("/user/getlist", async (req, res) => {
     try {
 
-        const resSQL = await client.query(`SELECT * FROM "public"."Ref";`);
+        const resSQL = await client.query(`SELECT * FROM "public"."Ref" WHERE "";`);
         res.send(resSQL.rows);
     } catch {
         res.send((500).toString());
