@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import "./Auth.scss"
 import {AuthUser} from "../../api/User.ts";
 import {$user} from "../../store/userStore.ts";
@@ -29,7 +29,9 @@ export default function Auth(){
 
         setViserror(true);
     }
-
+    useEffect(() => {
+        document.getElementsByTagName('body')[0].style.backgroundImage = `url('/picture.svg')`;
+    }, []);
     return(
         <div className="Auth">
             <form className="FormAuth">
