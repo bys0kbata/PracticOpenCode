@@ -54,7 +54,7 @@
     docker-compose run
  ```   
   2) Самому в ручную через командную консоль:
-  ```bash
+  ```powershell
     cd ./Front/reference/
     npm i
     npm run dev
