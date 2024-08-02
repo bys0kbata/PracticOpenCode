@@ -11,7 +11,9 @@ export default function Ref() {
         )
     }
 
+ const onButtonClick = ()=>{
 
+ }
 
     return(
         <div className="ref">
@@ -37,7 +39,7 @@ export default function Ref() {
             <textarea/>
             <input/>
             <div>
-
+                <button> Печать</button>
             </div>
         </div>
     )
