@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 import "./Auth.scss"
 import {AuthUser} from "../../api/User.ts";
-import {$user} from "../../store/userStore.ts";
+import {$user, updateUser} from "../../store/userStore.ts";
 
 interface User{
-    login: string ,
+    login: string,
     password: string
 }
 
@@ -16,17 +16,24 @@ export default function Auth(){
     const data: User = {
         login: `${login}`,
         password: `${password}`
-}
+    }
+    const data2 ={
+        isAuth: true,
+        name: 'Nike',
+        email: 'denis@gmail.com',
+        role: 'U'
+    }
 
     const ErrorMessage = ()=>{ return(<p className="error" >Неверно введен логин или пароль. </p>)}
 
     const valid = (e)=>{
         e.preventDefault();
-        AuthUser(data)
-            .then(()=>{
-                $user.on(true,)
-            })
-
+        // AuthUser(data)
+        //     .then(()=>{
+                
+        //         updateUser(data2)
+        //     }) eUser(data2,)
+        updateUser()
         setViserror(true);
     }
     useEffect(() => {

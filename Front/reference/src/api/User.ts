@@ -36,7 +36,6 @@ export async function AuthUser(user: User){
     } catch{
         console.log("Ошибка1");
     }
-
 }
 export async function getoneuser(){
     await axios.get( `${IPserver}/user/getone`, );
