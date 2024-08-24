@@ -33,7 +33,7 @@ export default function Auth(){
                 
         //         updateUser(data2)
         //     }) eUser(data2,)
-        updateUser()
+        updateUser(data2)
         setViserror(true);
     }
     useEffect(() => {
