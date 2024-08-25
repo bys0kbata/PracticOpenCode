@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import "./Auth.scss"
 import {AuthUser} from "../../api/User.ts";
 import {$user, updateUser} from "../../store/userStore.ts";
+import { useNavigate } from "react-router-dom";
 
 interface User{
     login: string,
@@ -12,7 +13,7 @@ export default function Auth(){
     const [login, setLogin] = useState<string >();
     const [password, setPassword] = useState<string>();
     const [viserror, setViserror] = useState(false);
-
+    const nav = useNavigate();
     const data: User = {
         login: `${login}`,
         password: `${password}`
@@ -21,7 +22,7 @@ export default function Auth(){
         isAuth: true,
         name: 'Nike',
         email: 'denis@gmail.com',
-        role: 'U'
+        role: 'Подписант'
     }
 
     const ErrorMessage = ()=>{ return(<p className="error" >Неверно введен логин или пароль. </p>)}
@@ -34,6 +35,7 @@ export default function Auth(){
         //         updateUser(data2)
         //     }) eUser(data2,)
         updateUser(data2)
+        nav("/main")
         setViserror(true);
     }
     useEffect(() => {
