@@ -34,4 +34,4 @@ export const Counter = () => {
       <button onClick={() => $counter.setState(counter + 1)}>Increment</button>
     </div>
   );
-};
+}
