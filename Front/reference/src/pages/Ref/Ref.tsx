@@ -1,9 +1,10 @@
 import { useStore } from "effector-react";
 import { $user } from "../../store/userStore";
 import "./Ref.scss"
+import { useNavigate } from "react-router-dom";
 
 export default function Ref() {
-
+    const nav = useNavigate();
    const user = useStore($user)
     const StatusElement = ()=>{
         return(
@@ -103,7 +104,7 @@ console.log(user)
             <div>
                 <ButtonMenu />
                 <button> Печать</button>
-                <button> Закрыть</button>
+                <button onClick={(e)=>{e.preventDefault(); nav("/main")}}> Закрыть</button>
                 <button> Сохранить</button>
             </div>
         </div>
