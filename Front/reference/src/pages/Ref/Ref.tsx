@@ -5,36 +5,36 @@ import { useNavigate } from "react-router-dom";
 
 export default function Ref() {
     const nav = useNavigate();
-   const user = useStore($user)
+    const user = useStore($user)
     const StatusElement = ()=>{
         return(
-            <div className="StatusElement">
+            <div className="StatusGray">
                 Создана
             </div>
         )
     }
-console.log(user)
- const ButtonMenu = ()=>{
+    console.log(user)
+    const ButtonMenu = ()=>{
     const Cancel = () =>{
-        return(<button>Отклонить</button>)
+        return(<button className="no">Отклонить</button>)
     }
     switch(user.role){
         case "Согласовант":{
-            return(<div>
+            return(<div className="ButtonMenu">
                 <Cancel></Cancel>
-                <button>Cогласовать</button>
+                <button className="yes">Cогласовать</button>
             </div>)
         }
         case "Подписант":{
-            return(<div>
+            return(<div className="ButtonMenu">
                 <Cancel></Cancel>
-                <button> Подписать</button>
+                <button className="yes"> Подписать</button>
             </div>)
         }
-        case "СРегистратор":{
-            return(<div>
+        case "Регистратор":{
+            return(<div className="ButtonMenu">
                 <Cancel></Cancel>
-                <button> Зарегистрировать</button>
+                <button className="yes"> Зарегистрировать</button>
             </div>)
         }
     }
@@ -101,11 +101,13 @@ console.log(user)
                     <input name="numberRef" disabled></input>
             </div>
             <div className="dividing-line"/>
-            <div>
+            <div className="BodyBottom">
                 <ButtonMenu />
-                <button> Печать</button>
-                <button onClick={(e)=>{e.preventDefault(); nav("/main")}}> Закрыть</button>
-                <button> Сохранить</button>
+                <button className="Center"> Печать</button>
+                <div className="Left">
+                    <button onClick={(e)=>{e.preventDefault(); nav("/main")}}> Закрыть</button>
+                    <button> Сохранить</button>
+                </div>
             </div>
         </div>
     )

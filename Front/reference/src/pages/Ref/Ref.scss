@@ -3,13 +3,111 @@ body{
   .Box{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .Container{
     display: flex;
     flex-direction:column;
     margin:1vh;
   }
+  h1{
+    margin-top: 1vh;
+    margin-left: 1vh;
+  }
+  textarea, input{
+    border-radius: 15px;
+    border-width: 1px;
+    border-color:#0500FF;
+    border-style: solid;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+  }
   button{
-    
+    background: white;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color:#0500FF;
+    border-style: solid;
+    width: max-content;
+    padding-top:0.5vh;
+    padding-bottom:0.5vh;
+    padding-right:2.5vh;
+    padding-left:2.5vh;
+
+  }
+  button:hover{
+    animation: changeColor 0.3s ease forwards;
+  }
+  .yes{
+    background: #45B433;
+  }
+  .no{
+    background: #D24040;
+  }
+  .BodyBottom{
+    display: flex;
+    margin: 1vh;
+    justify-content: space-between;
+  }
+  .StatusGreen{
+    margin:1vh;
+    width: max-content;
+    padding: 0.75vh 2vh;
+    border: 1px solid #0500FF;
+    background: #51C54F;
+    border-radius: 15px;
+    text-align: center;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    padding-right:5vh;
+    padding-left:5vh;
+  }
+  .StatusOrange{
+    border-radius: 15px;
+    width: max-content;
+    padding: 0.75vh 2vh;
+    border: 1px solid #0500FF;
+    background: #FFB257;
+    text-align: center;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    padding-right:5vh;
+    padding-left:5vh;
+  }
+  .StatusPurPure{
+    border-radius: 15px;
+    width: max-content;
+    padding: 0.75vh 2vh;
+    border: 1px solid #0500FF;
+    background: #D6D6FF;
+    text-align: center;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    padding-right:5vh;
+    padding-left:5vh;
+  }
+  .StatusGray{
+    margin:1vh;
+    border-radius: 15px;
+    width: max-content;
+    padding: 0.75vh 2vh;
+    border: 1px solid #0500FF;
+    background: #D9D9D9;
+    text-align: center;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    padding-right:5vh;
+    padding-left:5vh;
+  }
+}
+
+@keyframes changeColor {
+  from {
+    color: white;
+    background-color: #0500FF;
+  }
+  to {
+    color: white;
+    background-color: #4e41ff;
   }
 }
