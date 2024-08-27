@@ -1,5 +1,6 @@
 import { useStore } from "effector-react";
 import { $user } from "../../store/userStore";
+import "./Ref.scss"
 
 export default function Ref() {
 
@@ -46,7 +47,7 @@ console.log(user)
                 <StatusElement/>
             </div>
             <div className="dividing-line"/>
-            <div>
+            <div className="Box">
                 <div className="Container">
                     <label htmlFor="numberRef">Номер</label>
                     <input name="DataCreateRef" disabled></input>
@@ -64,10 +65,12 @@ console.log(user)
                     <input name="numberRef" disabled></input>
                 </div>
             </div>
+            <div className="Container">
             <label htmlFor="DataCreateRef">Краткое содержание</label>
             <input/>
-            <div>
-            <div className="Container">
+            </div>
+            <div className="Box">
+                <div className="Container">
                     <label htmlFor="numberRef">Кому</label>
                     <input name="DataCreateRef" disabled></input>
                 </div>
