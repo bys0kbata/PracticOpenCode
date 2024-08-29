@@ -73,7 +73,7 @@ export default function Ref() {
             <div className="Box">
                 <div className="Container">
                     <label htmlFor="numberRef">Кому</label>
-                    <input name="DataCreateRef" disabled></input>
+                    <input name="DataCreateRef"  value="Пете" disabled></input>
                 </div>
                 <div className="Container">
                     <label htmlFor="DataCreateRef">Исполнитель</label>
